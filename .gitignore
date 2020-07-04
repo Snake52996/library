@@ -1,0 +1,14 @@
+.DS_Store
+.idea/
+Thumbs.db
+db.json
+*.log
+*.iml
+yarn.lock
+node_modules/
+public/
+.deploy*/
+source/lib/*
+!source/lib/font-awesome/
+!source/lib/anime.min.js
+!source/lib/animate-css/
