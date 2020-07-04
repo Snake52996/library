@@ -14,9 +14,11 @@
   {% set copyright_year = date(null, 'YYYY') %}
   &copy; {% if theme.footer.since and theme.footer.since != copyright_year %}{{ theme.footer.since }} – {% endif %}
   <span itemprop="copyrightYear">{{ copyright_year }}</span>
+  {% if theme.footer.icon.name %}
   <span class="with-love">
     <i class="{{ theme.footer.icon.name }}"></i>
   </span>
+  {% endif %}
   <span class="author" itemprop="copyrightHolder">{{ theme.footer.copyright or author }}</span>
 
   {%- if config.symbols_count_time.total_symbols %}

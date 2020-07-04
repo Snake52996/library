@@ -19,7 +19,7 @@
         <{%- if is_index %}h2{% else %}h1{%- endif %} class="post-title{%- if post.direction and post.direction.toLowerCase() === 'rtl' %} rtl{%- endif %}" itemprop="name headline">
           {# Link posts #}
           {%- if post.link %}
-            {%- if post.sticky > 0 %}
+            {%- if post.top > 0 %}
               <span class="post-sticky-flag" title="{{ __('post.sticky') }}">
                 <i class="fa fa-thumbtack"></i>
               </span>
@@ -28,7 +28,7 @@
             {%- set postText = post.title or post.link %}
             {{ next_url(post.link, postText + postTitleIcon, {class: 'post-title-link post-title-link-external', itemprop: 'url'}) }}
           {% elif is_index %}
-            {%- if post.sticky > 0 %}
+            {%- if post.top > 0 %}
               <span class="post-sticky-flag" title="{{ __('post.sticky') }}">
                 <i class="fa fa-thumbtack"></i>
               </span>
